@@ -34,7 +34,7 @@ jobs:
       - name: Test Hello World Page
         run: |
           curl -s -o response.html http://localhost:8080/
-          grep "test" response.html
+          grep "Test" response.html
 
       - name: Stop Nginx container
         run: docker stop test-nginx
