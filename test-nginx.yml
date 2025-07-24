@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+      - name: Show Nginx config
+        run: docker exec test-nginx cat /etc/nginx/nginx.conf
 
       - name: Start Nginx with Docker
         run: |
