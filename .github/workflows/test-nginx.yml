@@ -37,5 +37,8 @@ jobs:
           curl -s -o response.html http://localhost:8080/
           grep "Test" response.html
 
+          curl -s -o response_test.html http://localhost:8080/index.html
+          grep "Hello" response_test.html
+
       - name: Stop Nginx container
         run: docker stop test-nginx
