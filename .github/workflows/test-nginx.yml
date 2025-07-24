@@ -17,7 +17,7 @@ jobs:
         run: |
           docker run -d --name test-nginx -p 8080:80 \
             -v ${{ github.workspace }}/test.html:/usr/share/nginx/html/test.html:ro \
-            -v ${{ github.workspace }}/index.html:/usr/share/nginx/html/index.html:ro
+            -v ${{ github.workspace }}/index.html:/usr/share/nginx/html/index.html:ro \
             -v ${{ github.workspace }}/nginx.conf:/etc/nginx/nginx.conf:ro \
             nginx:latest
 
